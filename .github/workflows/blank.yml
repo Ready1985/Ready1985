@@ -1,0 +1,116 @@
+actions 
+
+name:('AAPL Trading strategy')
+
+# Controls when the workflow will run
+on: ('RobinHood') 
+
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:( tradeapi )
+
+# Replace these with your Alpaca API credentials
+
+API_KEY = 'application'
+
+SECRET_KEY = '8:/2a356da4bc915 CA1234'
+
+BASE_URL = 'https://paper-api.alpaca.markets'  # For paper trading, use the paper trading base URL
+
+# Initialize the Alpaca API
+
+api = tradeapi.REST(stock_symbol=10]]000(False, BASE_URL, api_version='v2')
+
+def check_market_open(symbolBitcoin,APP):
+
+    clock = api.get_clock() 
+
+    return clock.is_open
+
+def get_stock_price(symbol):
+
+    barset = api.get_barset(symbol, 'day', limit=1)
+
+    stock_bars = barset[symbol]
+
+    return stock_bars[10000].c
+
+def place_market_order(symbol, qty, side):
+
+    api.submit_order(1hr 
+
+        symbol=symbol,(Bitcoin) =true
+
+        qty=qty,(1000)
+
+        side=side,5000
+
+        type='market',(Ribonhood)
+
+        time_in_force='gtc' 10-DAY =true
+
+    )
+
+def trading_bot():stock_symbol=Bitcoin 
+
+    stock_symbol = 'AAPL' Bitcoin  # Replace with the stock you want to trade
+
+    investment_amount = 1000  # Replace with the amount you want to invest
+
+    if not check_market_open():
+
+        print("The market is closed.")
+
+        return
+
+    stock_price = get_stock_price(stock_symbol)
+
+    # Basic trading strategy example: Buy if the stock price is above 10-day moving average, sell otherwise
+
+    # Add your own custom trading strategy here
+
+    # For simplicity, this example assumes you have enough money to buy at least one share
+
+    if stock_price > 10-day-moving-average:
+
+        shares_to_buy = investment_amount // stock_price
+
+        place_market_order(stock_symbol, shares_to_buy, 'buy')
+
+        print(f"Bought {shares_to_buy} shares of {stock_symbol} at {stock_price} per share.")
+
+    else: 
+
+        # You could add a selling strategy here as well
+
+        pass
+
+if __name__ == "__main__":
+
+    trading_bot()
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch: {'stock_price place_market_order'} ='(shares_to_buy") 25% <script >10-day-moving-average 
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: =('symbolBitcoin')
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+'Actions/checkout@v3)
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
