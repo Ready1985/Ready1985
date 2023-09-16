@@ -1,4 +1,4 @@
-1c4f0efd866aca96765519920210c7aecc6cb835HELP me Build a Trading Bot
+HELP me Build a Trading Bot or the best app 
 
 <!--
 **Ready1985/Ready1985** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,4 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+I  Networks to this but I know computers!!!
